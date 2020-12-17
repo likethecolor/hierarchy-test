@@ -46,9 +46,7 @@ def parse_node_element(node_str: str) -> Node:
     if len(elements) != 3:
         raise Exception(f"node string invalid format: '{node_str}'")
 
-    if elements[0] == 'null':
-        elements[0] = "-1"
-    return Node(int(elements[0].strip()), int(elements[1].strip()), elements[2].strip())
+    return Node(elements[0].strip(), elements[1].strip(), elements[2].strip())
 
 
 def add_child_nodes(all_nodes: list):
